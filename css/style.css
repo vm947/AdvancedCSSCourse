@@ -15,14 +15,21 @@ makes sure pic on top doesnt change, but bottom
 will change and resize perspective
 */
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+  /* 
+  We add *::after and *::before because
+  only "real" elements are targeted by just
+  using *
+   */
 }
 
-html{
-  font-size: 10px;
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -32,6 +39,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -155,13 +163,13 @@ body {
 }
 
 .btn:hover {
-  transform: translateY(-.3rem);
+  transform: translateY(-0.3rem);
   box-shadow: 0px 2.5rem 2rem rgba(0, 0, 0, 0.5);
 }
 
 .btn:active {
-  transform: translateY(-.1rem);
-  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.5);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 .btn-white {
