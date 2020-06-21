@@ -169,6 +169,11 @@ body {
   &:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0px 2.5rem 2rem rgba($color-black, 0.5);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
   }
 
   &:active {
@@ -202,11 +207,6 @@ body {
     left: 0;
     z-index: -1;
     transition: all 0.4s;
-  }
-
-  &:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
   }
 
   &--animated {
