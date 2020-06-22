@@ -1,0 +1,27 @@
+/*
+border-box- change box model 
+so borders and paddings are not longer added 
+height and width of objects
+background-position: top 
+makes sure pic on top doesnt change, but bottom
+will change and resize perspective
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /* 
+  We add *::after and *::before because
+  only "real" elements are targeted by just
+  using *
+   */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
