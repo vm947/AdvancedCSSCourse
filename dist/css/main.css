@@ -182,8 +182,13 @@ body {
 }
 
 .heading-secondary:hover {
-  -webkit-transform: skewY(2deg) skewX(15deg);
-          transform: skewY(2deg) skewX(15deg);
+  -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+          transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.u-center-text {
+  text-align: center;
 }
 
 .btn:link, .btn:visited {
@@ -262,7 +267,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: #ccc;
   margin: 0 auto;
 }
 
@@ -277,7 +281,6 @@ body {
 }
 
 .row [class^="col-"] {
-  background-color: orangered;
   float: left;
   text-align: center;
 }
