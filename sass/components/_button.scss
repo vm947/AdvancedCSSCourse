@@ -30,7 +30,7 @@
   }
 
   &--white {
-    background-color: $color-white;
+    background-color: red;
     color: $color-grey-dark;
 
     &:after {
@@ -86,7 +86,7 @@
   }
 
   &:active {
-    box-shadow: 0 .5rem 1rem rgba($color-black, 0.5);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
     transform: translateY(0);
   }
 }
