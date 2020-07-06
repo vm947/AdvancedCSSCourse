@@ -92,6 +92,36 @@
   }
 }
 
+@-webkit-keyframes MoveInBottom--2 {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -90%) rotateY(90deg);
+            transform: translate(-50%, -90%) rotateY(90deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes MoveInBottom--2 {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -90%) rotateY(90deg);
+            transform: translate(-50%, -90%) rotateY(90deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
 /*
 border-box- change box model 
 so borders and paddings are not longer added 
@@ -333,6 +363,10 @@ body {
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.btn-text:hover .btn-text__arrow {
+  color: black;
 }
 
 .card {
@@ -592,15 +626,54 @@ body {
   clip-path: circle(50% at 50% 50%);
   -webkit-transform: translateX(-3rem) skewX(12deg);
           transform: translateX(-3rem) skewX(12deg);
+  position: relative;
 }
 
 .story__img {
   height: 100%;
+  -webkit-transform: translateX(-4rem) scale(1.4);
+          transform: translateX(-4rem) scale(1.4);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .story__text {
   -webkit-transform: skewX(12deg);
           transform: skewX(12deg);
+}
+
+.story__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20%);
+          transform: translate(-50%, 20%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.story:hover .story__caption {
+  -webkit-animation: MoveInBottom--2 1s ease;
+          animation: MoveInBottom--2 1s ease;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.story:hover .story__img {
+  -webkit-transform: translateX(-4rem) scale(1);
+          transform: translateX(-4rem) scale(1);
+  -webkit-filter: blur(3px) brightness(60%);
+          filter: blur(3px) brightness(60%);
 }
 
 .row {
