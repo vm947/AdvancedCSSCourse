@@ -29,5 +29,22 @@
 
 .section-stories {
   position: relative;
-  padding: 15rem 0 .2rem 0;
+  padding: 15rem 0 0.2rem 0;
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}
+
+.book {
+  background-image: url("../../img/nat-10.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 3rem 5rem rgba($color: $color-black, $alpha: 0.5);
+  height: 50rem;
 }
