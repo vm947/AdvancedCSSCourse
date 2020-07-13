@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -12,6 +13,10 @@
     must add transition to inital state of btn
     */
     font-size: $default-font-size;
+
+    //change for <button> element
+    border: none;
+    cursor: ponter;
   }
 
   &:hover {
@@ -24,7 +29,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.5);
   }
@@ -101,6 +108,5 @@
 
   &:hover &__arrow {
     color: black;
-    
   }
 }
