@@ -12,6 +12,7 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 2000;
+    box-shadow: 0rem 1rem 3rem rgba($color-black, 0.15);
   }
 
   &__background {
@@ -26,19 +27,21 @@
       $color-primary-dark
     );
     z-index: 1000;
-
-    transform: scale(80);
+    transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+    // transform: scale(80);
   }
 
   &__nav {
     height: 100vh;
-    width: 100%;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1500;
-  }
 
+    opacity: 0;
+    width: 0;
+    transition: all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
   &__list {
     position: absolute;
     top: 50%;
@@ -46,6 +49,7 @@
     transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
+    width: 100%;
   }
 
   &__item {
@@ -85,5 +89,14 @@
       transform: translateX(1rem);
       border-radius: 3px;
     }
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
   }
 }
