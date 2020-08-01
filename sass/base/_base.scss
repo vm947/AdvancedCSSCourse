@@ -22,6 +22,8 @@ will change and resize perspective
 
 html {
   font-size: 62.5%;
+
+  @include respond-phone {
+    font-size: 50%;
+  }
 }
-
-
