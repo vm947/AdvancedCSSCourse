@@ -21,9 +21,34 @@ will change and resize perspective
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px in this case 10/16 = 62.5%
 
-  @include respond-phone {
+  // @include respond(phone) {
+  //   //1rem = 8px, 8/16
+  //   font-size: 50%;
+  //we dont need this quiery because it will have same values as tab-port
+  // }
+
+  @include respond(tab-land) {
+    //width < 1200
+    //9rem = 8px, 9/16 = 56.25%
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    //width < 900
+    //1rem = 8px, 8/16 = 50%
     font-size: 50%;
+  }
+
+  @include respond(phone) {
+    //width < 600
+    //1rem = 8px, 8/16 = 50%
+    font-size: 40%;
+  }
+
+  @include respond(big-desktop) {
+    //1rem = 12px, 12/16
+    font-size: 75%;
   }
 }
