@@ -1130,6 +1130,13 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
+@media (max-width: 37.5em) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+}
+
 .header__logo-box {
   position: absolute;
   top: 4rem;
@@ -1168,6 +1175,20 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 56.25em) {
+  .navigation__button {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .navigation__button {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
+}
+
 .navigation__background {
   height: 6rem;
   width: 6rem;
@@ -1181,6 +1202,20 @@ body {
   transition: -webkit-transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
   transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
   transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1), -webkit-transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+@media (max-width: 56.25em) {
+  .navigation__background {
+    top: 4.5rem;
+    right: 4.5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .navigation__background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
 }
 
 .navigation__nav {
